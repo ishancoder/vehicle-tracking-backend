@@ -1,3 +1,5 @@
+import "@babel/polyfill";
+
 import http from 'http';
 import socket from 'socket.io';
 import express from 'express';
@@ -7,7 +9,7 @@ import db from './db/db'
 
 
 const logger = morgan('tiny');
-const PORT = 8000;
+const PORT = process.env.PORT || 8000;
 
 // Setup socket and server
 const app = express();
