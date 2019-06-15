@@ -6,6 +6,7 @@ import express from 'express';
 import bodyParser from 'body-parser';
 import morgan from 'morgan';
 import db from './db/db'
+import cors from 'cors';
 
 
 const logger = morgan('tiny');
@@ -21,11 +22,7 @@ app.use(logger);
 app.use(bodyParser.json());
 
 // Allowing every origin for now.
-app.use(function(req, res, next) {
-    res.header("Access-Control-Allow-Origin", "*");
-    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-    next();
-});
+app.use(cors());
 
 
 app.get('/', async (req, res) => {
