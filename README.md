@@ -67,6 +67,12 @@ The WebSocket is setup using [Socket.io](https://socket.io) & it relies on three
 
 If you want to know more how the DASHBOARD responds to these events and update the view. Check out [https://github.com/ishancoder/vehicle-tracking-fronend](https://github.com/ishancoder/vehicle-tracking-fronend)
 
+## Technologies Used
+1. `Node.js` for the JavaScript RunTime.
+2. `Express.js` for the Server.
+3. `cors` for enabling cross origin requests.
+4. `uuid` for generating unique ids for vehicles.
+5. `Socket.io` for emiting events.
 
 ## How to get this thing Running Locally.
 Simple enough. Follow along
