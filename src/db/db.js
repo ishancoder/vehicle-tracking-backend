@@ -32,6 +32,11 @@ vehiclesData.prototype.updatePosition = function(id, newLat, newLng, speed) {
     return Promise.resolve({status: "SUCCESS", data:{...this.store[id]}});
 };
 
+// This method is only going to be useful for testing purposes. Don't call it elsewhere
+vehiclesData.prototype.clear = function() {
+    this.store = {};
+};
+
 const vDB = new vehiclesData();
 
 export default vDB;
