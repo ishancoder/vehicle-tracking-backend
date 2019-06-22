@@ -84,5 +84,18 @@ Simple enough. Follow along
 6. Run `npm serve` or `yarn serve`
 7. The Server will start running on [**http://loclhost:8000**](http://loclhost:8000)
 
+# Updates
+I've dockerised the application. You can see the `Dockerfile` for more details. But basically to deploy on heroku using docker container all you have to do is this.
+
+1. Run `heroku container:push web` this will create an image using the `Dockerfile` and push it to the Heroku's image registry.
+2. Run `heroku container:release web` to deploy the image.
+3. And that's it the app will behave as it was behaving earlier.
+
+## Tests
+I've added Test cases for basic scenarios using `mocha.js`. 
+
+**NOTE:** The Simulator is now pulled to the backend side and lives inside the mocha test.
+
+Run `npm test` or `yarn test` to run test cases & Simulator. If you are seeing the results in the dashboard as well, I recommend refreshing the dashboard as soon as you run the test command, because I've used the `database clear` function to clear up the data in the starting of the test and since this app's statement doesn't had the functionality of removing vehicles there is no API end point for doing that.
 
 ## Thanks for Reading 😊
